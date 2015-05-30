@@ -3,17 +3,32 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Jkeep</title>
+  <title>Splay | Jkeep</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Jkeep">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="splay是一种独特的二叉排序树，通过rotate和splay操作，将需要处理的节点旋转至跟或是根的儿子处，在对其进行操作。也就是说splay天生就有一种类似缓存的能力。splay不能保证单次操作的复杂度O（logn）但是它能保证它的均摊复杂度o(logn).
+rotate操作
+void rotate(int r,int kind)
+{
+    int y = pre[r];
+    pushdo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Splay">
+<meta property="og:url" content="http://yoursite.com/2015/05/30/Splay/index.html">
 <meta property="og:site_name" content="Jkeep">
-<meta property="og:description">
+<meta property="og:description" content="splay是一种独特的二叉排序树，通过rotate和splay操作，将需要处理的节点旋转至跟或是根的儿子处，在对其进行操作。也就是说splay天生就有一种类似缓存的能力。splay不能保证单次操作的复杂度O（logn）但是它能保证它的均摊复杂度o(logn).
+rotate操作
+void rotate(int r,int kind)
+{
+    int y = pre[r];
+    pushdo">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Jkeep">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Splay">
+<meta name="twitter:description" content="splay是一种独特的二叉排序树，通过rotate和splay操作，将需要处理的节点旋转至跟或是根的儿子处，在对其进行操作。也就是说splay天生就有一种类似缓存的能力。splay不能保证单次操作的复杂度O（logn）但是它能保证它的均摊复杂度o(logn).
+rotate操作
+void rotate(int r,int kind)
+{
+    int y = pre[r];
+    pushdo">
   
     <link rel="alternative" href="/atom.xml" title="Jkeep" type="application/atom+xml">
   
@@ -59,9 +74,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-Splay" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Splay" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/05/30/Splay/" class="article-date">
   <time datetime="2015-05-30T03:03:02.000Z" itemprop="datePublished">2015-05-30</time>
@@ -74,8 +87,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/05/30/Splay/">Splay</a>
+    <h1 class="article-title" itemprop="name">
+      Splay
     </h1>
   
 
@@ -158,99 +171,20 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-haskell-a" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/05/07/haskell-a/" class="article-date">
-  <time datetime="2015-05-07T03:33:38.000Z" itemprop="datePublished">2015-05-07</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/05/07/haskell-a/">haskell(a)</a>
-    </h1>
+    <a href="/2015/05/07/haskell-a/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">haskell(a)</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="st">st</h1><p>the first time to learn a language that has much difference with c. haskell is beautiful.<br>gain interests a lot </p>
-<h1 id="curried_function">curried function</h1><p>a important definition in haskell is curried function.<br>what is it? </p>
-<p>for example,</p>
-<figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">divideByTen ::</span> (Floating <span class="literal">a</span>) =&gt; <span class="literal">a</span> -&gt; <span class="literal">a</span></span><br><span class="line">divideByTen = (/<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
-<p>we defined a function as below.<br>if we assign it as:</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">divideByTen</span> <span class="number">180</span></span><br></pre></td></tr></table></figure>
-<p>the answer will be 18.0.<br>It’s cool. </p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/05/07/haskell-a/" data-id="ciaah0pga0002uga9ei3ei8oe" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
 
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/05/06/hello-world/" class="article-date">
-  <time datetime="2015-05-06T15:34:08.353Z" itemprop="datePublished">2015-05-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/05/06/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/05/06/hello-world/" data-id="ciaah0pga0001uga9n0bazwwa" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-  
 </section>
         
           <aside id="sidebar">
