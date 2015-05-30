@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>hdu3487 | Jkeep</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Play with Chain
+Time Limit: 6000/2000 MS (Java/Others)    Memory Limit: 65536/32768 K (Java/Others)Total Submission(s): 2783    Accepted Submission(s): 1141
+Problem DescriptionYaoYao is fond of playin">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hdu3487">
+<meta property="og:url" content="http://yoursite.com/2015/05/30/hdu3487/index.html">
+<meta property="og:site_name" content="Jkeep">
+<meta property="og:description" content="Play with Chain
+Time Limit: 6000/2000 MS (Java/Others)    Memory Limit: 65536/32768 K (Java/Others)Total Submission(s): 2783    Accepted Submission(s): 1141
+Problem DescriptionYaoYao is fond of playin">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="hdu3487">
+<meta name="twitter:description" content="Play with Chain
+Time Limit: 6000/2000 MS (Java/Others)    Memory Limit: 65536/32768 K (Java/Others)Total Submission(s): 2783    Accepted Submission(s): 1141
+Problem DescriptionYaoYao is fond of playin">
+  
+    <link rel="alternative" href="/atom.xml" title="Jkeep" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Jkeep</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="q" value="site:http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-hdu3487" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/05/30/hdu3487/" class="article-date">
+  <time datetime="2015-05-30T03:35:15.000Z" itemprop="datePublished">2015-05-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      hdu3487
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Play with Chain</p>
+<p>Time Limit: 6000/2000 MS (Java/Others)    Memory Limit: 65536/32768 K (Java/Others)<br>Total Submission(s): 2783    Accepted Submission(s): 1141</p>
+<h2 id="Problem_Description">Problem Description</h2><p>YaoYao is fond of playing his chains. He has a chain containing n diamonds on it. Diamonds are numbered from 1 to n.<br>At first, the diamonds on the chain is a sequence: 1, 2, 3, …, n.<br>He will perform two types of operations:<br>CUT a b c: He will first cut down the chain from the ath diamond to the bth diamond. And then insert it after the cth diamond on the remaining chain.<br>For example, if n=8, the chain is: 1 2 3 4 5 6 7 8; We perform “CUT 3 5 4”, Then we first cut down 3 4 5, and the remaining chain would be: 1 2 6 7 8. Then we insert “3 4 5” into the chain before 5th diamond, the chain turns out to be: 1 2 6 7 3 4 5 8.</p>
+<p>FLIP a b: We first cut down the chain from the ath diamond to the bth diamond. Then reverse the chain and put them back to the original position.<br>For example, if we perform “FLIP 2 6” on the chain: 1 2 6 7 3 4 5 8. The chain will turn out to be: 1 4 3 7 6 2 5 8</p>
+<p>He wants to know what the chain looks like after perform m operations. Could you help him? </p>
+<h2 id="Input">Input</h2><p>There will be multiple test cases in a test data.<br>For each test case, the first line contains two numbers: n and m (1≤n, m≤3*100000), indicating the total number of diamonds on the chain and the number of operations respectively.<br>Then m lines follow, each line contains one operation. The command is like this:<br>CUT a b c // Means a CUT operation, 1 ≤ a ≤ b ≤ n, 0≤ c ≤ n-(b-a+1).<br>FLIP a b    // Means a FLIP operation, 1 ≤ a &lt; b ≤ n.<br>The input ends up with two negative numbers, which should not be processed as a case.</p>
+<h2 id="Output">Output</h2><p>For each test case, you should print a line with n numbers. The ith number is the number of the ith diamond on the chain.</p>
+<h2 id="Sample_Input">Sample Input</h2><p>8 2 CUT 3 5 4 FLIP 2 6 -1 -1</p>
+<h2 id="Sample_Output">Sample Output</h2><p>1 4 3 7 6 2 5 8</p>
+<p>Source<br>2010 ACM-ICPC Multi-University Training Contest（5）——Host by BJTU</p>
+<h2 id="题目分析">题目分析</h2><p>这道题需要完成的操作有两个，第一个是cut，这里便是类似于区间修改，比如我们要把[a,b]这个区间删除掉，那么我们要做的有三步</p>
+<p>1 找到a-1，b+1对应的节点编号，这个用getrank可以做到</p>
+<p>2 将a-1节点splay到根上，将b+1节点旋转到根的右儿子上，那么很容易发现我们需要上删除的区间变成了b+1节点的左儿子</p>
+<p>3 直接把b+1的左儿子设为空便可以删除了，区间修改同理。为了节约空间，我们将删除的那些节点存入内存池。</p>
+<p>对于翻转操作，其实和删除是一样的，最后一步将删除节点改为传递一个翻转的lazy标记即可</p>
+<h2 id="代码">代码</h2><pre><code><span class="preprocessor">#<span class="keyword">include</span> &lt;cstdio&gt;</span>
+<span class="preprocessor">#<span class="keyword">include</span> &lt;iostream&gt;</span>
+
+<span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;
+<span class="preprocessor">#<span class="keyword">define</span> lson ch[r][0]</span>
+<span class="preprocessor">#<span class="keyword">define</span> rson ch[r][1]</span>
+<span class="preprocessor">#<span class="keyword">define</span> keyvalue ch[ch[root][1]][0]</span>
+<span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">300100</span>;
+<span class="keyword">int</span> ch[N][<span class="number">2</span>],rev[N],size[N],pre[N];
+<span class="keyword">int</span> key[N];
+<span class="keyword">int</span> root,n,m;
+<span class="keyword">int</span> tot;
+<span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">pushadd</span><span class="params">(<span class="keyword">int</span> r)</span>
+</span>{
+    <span class="keyword">if</span> (r == <span class="number">0</span>) <span class="keyword">return</span>;
+    swap(lson,rson);
+    rev[r] ^= <span class="number">1</span>;
+}
+<span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">pushup</span><span class="params">(<span class="keyword">int</span> r)</span>
+</span>{
+    size[r] = size[lson] + size[rson] + <span class="number">1</span>;
+}
+<span class="function"><span class="keyword">void</span> <span class="title">pushdown</span><span class="params">(<span class="keyword">int</span> r)</span>
+</span>{
+    <span class="keyword">if</span> (r == <span class="number">0</span>) <span class="keyword">return</span>;
+    <span class="keyword">if</span> (rev[r])
+    {
+        pushadd(lson);
+        pushadd(rson);
+        rev[r] = <span class="number">0</span>;
+    }
+}    
+<span class="function"><span class="keyword">void</span> <span class="title">newnode</span><span class="params">(<span class="keyword">int</span> &amp;r,<span class="keyword">int</span> father,<span class="keyword">int</span> k)</span>
+</span>{
+    r = k;
+    size[r] = <span class="number">1</span>;
+    rev[r] = <span class="number">0</span>;
+    key[r] = k;
+    pre[r] = father;
+    lson = rson = <span class="number">0</span>;
+}
+<span class="function"><span class="keyword">void</span> <span class="title">build</span><span class="params">(<span class="keyword">int</span> &amp;r,<span class="keyword">int</span> L,<span class="keyword">int</span> R,<span class="keyword">int</span> father)</span>
+</span>{
+    <span class="keyword">if</span> (L&gt;R) <span class="keyword">return</span>;
+    <span class="keyword">int</span> m = (L + R) &gt;&gt; <span class="number">1</span>;
+    newnode(r,father,m);
+    build(lson,L,m-<span class="number">1</span>,r);
+    build(rson,m+<span class="number">1</span>,R,r);
+    pushup(r);
+}
+<span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span>
+</span>{
+    key[root] = tot = root = ch[root][<span class="number">0</span>] = ch[root][<span class="number">1</span>]= size[root] = rev[root] = <span class="number">0</span>;
+    newnode(root,<span class="number">0</span>,n+<span class="number">1</span>);
+    newnode(ch[root][<span class="number">1</span>],root,n+<span class="number">2</span>);
+    build(keyvalue,<span class="number">1</span>,n,ch[root][<span class="number">1</span>]);
+    pushup(ch[root][<span class="number">1</span>]);
+    pushup(root);
+}
+<span class="function"><span class="keyword">void</span> <span class="title">rotate</span><span class="params">(<span class="keyword">int</span> r,<span class="keyword">int</span> kind)</span>
+</span>{
+    <span class="keyword">int</span> y = pre[r];
+    pushdown(y);
+    pushdown(r);
+    ch[y][!kind] = ch[r][kind];
+    pre[ch[r][kind]] = y;
+    <span class="keyword">if</span> (pre[y])
+        ch[pre[y]][ch[pre[y]][<span class="number">1</span>] == y] = r;
+    ch[r][kind] = y;
+    pre[r] = pre[y];
+    pre[y] = r;
+    pushup(y);
+}
+<span class="function"><span class="keyword">void</span> <span class="title">splay</span><span class="params">(<span class="keyword">int</span> r,<span class="keyword">int</span> goal)</span>
+</span>{
+    pushdown(r);
+    <span class="keyword">while</span> (pre[r] != goal)
+    {
+        <span class="keyword">if</span> (pre[pre[r]] == goal)
+        {
+            pushdown(pre[r]);
+            pushdown(r);
+            <span class="keyword">int</span> kind = ch[pre[r]][<span class="number">0</span>] == r;
+        rotate(r,kind);
+        }
+        <span class="keyword">else</span>
+        {
+            <span class="keyword">int</span> y = pre[r];
+            pushdown(pre[y]);
+            pushdown(y);
+            pushdown(r);
+            <span class="keyword">int</span> kind = ch[pre[y]][<span class="number">0</span>] == y;
+            <span class="keyword">if</span> (ch[y][kind] == r)
+            {
+                rotate(r,!kind);
+                rotate(r,kind);
+            }
+            <span class="keyword">else</span>
+            {
+                rotate(y,kind);
+                rotate(r,kind);
+            }
+
+        }
+    }
+pushup(r);
+    <span class="keyword">if</span> (goal == <span class="number">0</span>) root = r;
+}
+
+<span class="function"><span class="keyword">int</span> <span class="title">getrank</span><span class="params">(<span class="keyword">int</span> r,<span class="keyword">int</span> x)</span>
+</span>{
+    pushdown(r);
+    <span class="keyword">int</span> t = size[lson];
+    <span class="keyword">if</span> (x == t + <span class="number">1</span>) <span class="keyword">return</span> r;
+    <span class="keyword">if</span> (x &lt;= t) <span class="keyword">return</span> getrank(lson,x);
+    <span class="keyword">return</span> getrank(rson,x - t - <span class="number">1</span>);
+}
+<span class="function"><span class="keyword">void</span> <span class="title">cut</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b,<span class="keyword">int</span> c)</span>
+</span>{
+    a = getrank(root,a);
+    b = getrank(root,b+<span class="number">2</span>);
+    splay(a,<span class="number">0</span>);
+    splay(b,root);
+    <span class="keyword">int</span> r = ch[b][<span class="number">0</span>];
+    ch[b][<span class="number">0</span>] = <span class="number">0</span>;
+    pushup(b);
+    pushup(root);
+    <span class="keyword">int</span> r1 = getrank(root,c+<span class="number">1</span>);
+    <span class="keyword">int</span> r2 = getrank(root,c+<span class="number">2</span>);
+    splay(r1,<span class="number">0</span>);
+    splay(r2,root);
+    ch[r2][<span class="number">0</span>] = r;
+    pre[r] = r2;
+    pushup(r2);
+    pushup(r1);
+}    
+<span class="function"><span class="keyword">void</span> <span class="title">flip</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span>
+</span>{    
+    a = getrank(root,a);
+    b = getrank(root,b+<span class="number">2</span>);
+    splay(a,<span class="number">0</span>);
+    splay(b,root);
+    pushadd(keyvalue);
+}    
+<span class="keyword">int</span> cnt = <span class="number">0</span>;
+<span class="function"><span class="keyword">void</span> <span class="title">d</span><span class="params">(<span class="keyword">int</span> u)</span>
+</span>{
+    <span class="keyword">if</span> (u == <span class="number">0</span>) <span class="keyword">return</span>;
+    pushdown(u);
+    d(ch[u][<span class="number">0</span>]);
+    <span class="keyword">if</span> (key[u] &gt; <span class="number">0</span> &amp;&amp; key[u] &lt;= n)
+        <span class="built_in">printf</span>(<span class="string">"%d%c"</span>,key[u],<span class="string">" \n"</span>[(++cnt) == n]);
+    d(ch[u][<span class="number">1</span>]);
+}
+<span class="keyword">char</span> op[<span class="number">10</span>];
+<span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span>
+</span>{
+    freopen(<span class="string">"in.txt"</span>,<span class="string">"r"</span>,stdin);
+    <span class="keyword">while</span> (~<span class="built_in">scanf</span>(<span class="string">"%d %d"</span>,&amp;n,&amp;m))
+    {
+        <span class="keyword">if</span> (n == m &amp;&amp; n == -<span class="number">1</span>) <span class="keyword">break</span>;
+        init();
+       <span class="comment">// d(root);</span>
+       <span class="keyword">int</span> a,b,c;
+        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>;i &lt;= m;i++)
+        {
+
+            <span class="built_in">scanf</span>(<span class="string">"%s"</span>,op);
+            <span class="keyword">if</span> (op[<span class="number">0</span>] == <span class="string">'C'</span>)
+            {
+
+                <span class="built_in">scanf</span>(<span class="string">"%d %d %d"</span>,&amp;a,&amp;b,&amp;c);
+                cut(a,b,c);
+            }
+            <span class="keyword">else</span>
+            {
+                <span class="built_in">scanf</span>(<span class="string">"%d %d"</span>,&amp;a,&amp;b);
+                flip(a,b);
+            }
+        }
+
+        <span class="comment">//printf("%d\n",rev[keyvalue]);</span>
+        cnt = <span class="number">0</span>;
+        d(root);
+    }
+}
+</code></pre><hr>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/05/30/hdu3487/" data-id="ciaai2q6u0001yca9go8tdtwc" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/05/30/营业额统计/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">营业额统计</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  
+    
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a><span class="archive-list-count">5</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2015/05/30/hdu3487/">hdu3487</a>
+          </li>
+        
+          <li>
+            <a href="/2015/05/30/营业额统计/">营业额统计</a>
+          </li>
+        
+          <li>
+            <a href="/2015/05/30/Splay/">Splay</a>
+          </li>
+        
+          <li>
+            <a href="/2015/05/07/haskell/haskell-a/">haskell(a)</a>
+          </li>
+        
+          <li>
+            <a href="/2015/05/06/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 li ch<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>
