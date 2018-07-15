@@ -108,18 +108,18 @@
 
 
 
-  <meta name="description" content="auto 1auto x = 5;  decltype 1decltype(2 + 2) x = 1;  nullptr 12bool  f  =  nullptr;int  i  =  nullptr;  // error: A native nullptr can only be converted to bool or, using reinterpret_cast, to an inte">
+  <meta name="description" content="auto 1auto x = 5;  decltype 1decltype(2 + 2) x = 1;  nullptr 12bool f = nullptr;int i = nullptr;  // error: A native nullptr can only be converted to bool or, using reinterpret_cast, to an integral t">
 <meta name="keywords" content="c++11">
 <meta property="og:type" content="article">
 <meta property="og:title" content="c++ 11">
 <meta property="og:url" content="http://yoursite.com/2018/07/08/c++11/index.html">
 <meta property="og:site_name" content="KPages">
-<meta property="og:description" content="auto 1auto x = 5;  decltype 1decltype(2 + 2) x = 1;  nullptr 12bool  f  =  nullptr;int  i  =  nullptr;  // error: A native nullptr can only be converted to bool or, using reinterpret_cast, to an inte">
+<meta property="og:description" content="auto 1auto x = 5;  decltype 1decltype(2 + 2) x = 1;  nullptr 12bool f = nullptr;int i = nullptr;  // error: A native nullptr can only be converted to bool or, using reinterpret_cast, to an integral t">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-11T09:06:20.057Z">
+<meta property="og:updated_time" content="2018-07-15T13:43:48.470Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="c++ 11">
-<meta name="twitter:description" content="auto 1auto x = 5;  decltype 1decltype(2 + 2) x = 1;  nullptr 12bool  f  =  nullptr;int  i  =  nullptr;  // error: A native nullptr can only be converted to bool or, using reinterpret_cast, to an inte">
+<meta name="twitter:description" content="auto 1auto x = 5;  decltype 1decltype(2 + 2) x = 1;  nullptr 12bool f = nullptr;int i = nullptr;  // error: A native nullptr can only be converted to bool or, using reinterpret_cast, to an integral t">
 
 
 
@@ -340,7 +340,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-07-11 17:06:20" itemprop="dateModified" datetime="2018-07-11T17:06:20+08:00">2018-07-11</time>
+                <time title="Modified: 2018-07-15 21:43:48" itemprop="dateModified" datetime="2018-07-15T21:43:48+08:00">2018-07-15</time>
               
             
           </span>
@@ -406,7 +406,7 @@
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">decltype</span>(<span class="number">2</span> + <span class="number">2</span>) x = <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>nullptr</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">bool</span>  f  =  <span class="literal">nullptr</span>;</span><br><span class="line"><span class="keyword">int</span>  i  =  <span class="literal">nullptr</span>;  <span class="comment">// error: A native nullptr can only be converted to bool or, using reinterpret_cast, to an integral type</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">bool</span> f = <span class="literal">nullptr</span>;</span><br><span class="line"><span class="keyword">int</span> i = <span class="literal">nullptr</span>;  <span class="comment">// error: A native nullptr can only be converted to bool or, using reinterpret_cast, to an integral type</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Lambda</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">std</span>::function&lt;<span class="keyword">int</span>(<span class="keyword">int</span>)&gt; fib = [&amp;fib](<span class="keyword">int</span> n) &#123;<span class="keyword">return</span> n &lt; <span class="number">2</span> ? <span class="number">1</span> : fib(n<span class="number">-1</span>) + fib(n<span class="number">-2</span>);&#125;;  </span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; fib(<span class="number">10</span>) &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br></pre></td></tr></table></figure>
@@ -417,7 +417,7 @@
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Obj(Obj&amp;&amp; other): _value(<span class="built_in">std</span>::move(other._value)) &#123;</span><br><span class="line">    other._value = <span class="literal">nullptr</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>static_assert和 type traits</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static_assert</span>(Size  &lt;  <span class="number">3</span>,  <span class="string">"Size is too small"</span>);</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static_assert</span>(Size &lt; <span class="number">3</span>, <span class="string">"Size is too small"</span>);</span><br></pre></td></tr></table></figure></li>
 </ul>
 
       
@@ -525,7 +525,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -542,7 +542,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">categories</span>
                   
                 </div>
@@ -557,7 +561,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">1</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">tags</span>
                   
                 </div>
