@@ -15,11 +15,13 @@ categories:
   Given hash value H(k2), it is hard to get k2
 - puzzle-friendly
   ..
+
 ## digital signature
 - definition
   - sk(secret key), pk(public key)  = generate_random_keys
   - sig = mk_sig(msg, sk)
   - verify(sig, msg, pk) == true?
+
 ## Issues
 - Double spending
 - Decentralization
